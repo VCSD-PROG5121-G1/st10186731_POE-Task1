@@ -35,7 +35,7 @@ public class PROG1Java {
    do{
             
         userName = JOptionPane.showInputDialog("Please enter a username that contains an underscore "
-               + "and that is no longer than 5 charaters in length:");
+               + "and that is no longer than 5 characters in length:");
          
         
     if (userName.length()<=5 && userName.contains("_"))

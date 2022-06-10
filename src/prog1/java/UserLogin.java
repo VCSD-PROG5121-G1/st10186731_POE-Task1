@@ -1,7 +1,9 @@
 
 package prog1.java;
 
+
 import javax.swing.JOptionPane;
+
 
 
 public class UserLogin {
@@ -35,13 +37,10 @@ public class UserLogin {
     
   }
 } while(!userName.equals (userName2) && !passWord.equals(passWord2));
-      }
-        
-        
-        
-        
-        
-        
+      
+      }   
+            
+                    
         
     }
     

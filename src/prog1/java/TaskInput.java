@@ -38,7 +38,7 @@ public static int totalDurTasks;
         
     case 1 :
                 
-       addTask = Integer.parseInt(JOptionPane.showInputDialog("Pleaase enter the total amount"
+       addTask = Integer.parseInt(JOptionPane.showInputDialog("Please enter the total number"
                + " of tasks you would like to assign:"));
       // runs the program that runs the add task function for as many tasks as the user inputs  
       for (int d=0; d<addTask; d++){
@@ -77,9 +77,8 @@ public static int totalDurTasks;
        //functions as it adds up the total number of hours it would take for the assignments 
        totalDurTasks += durTask;
        
-       JOptionPane.showMessageDialog(null, 
-    " Your Task ID" + nameTask.substring(0, 1) + ":" + addTask + ":" + nameSurnameDev.substring(0, 2));
-       
+        JOptionPane.showMessageDialog(null, 
+    " Your Task ID :|" + nameTask.substring(0, 2)+":" + addTask + ":" + nameSurnameDev.substring(0, 3));      
        
      do{ 
          //menu that allows the user to select a task status
@@ -90,17 +89,17 @@ public static int totalDurTasks;
               + "Option 3 > Done"));
       //if else statement runs through the selected opion and selects and apropriate outcome  
        if(statusTask == 1){
-           
+                 
          JOptionPane.showMessageDialog(null,"To do");  
        }
        
        else if (statusTask == 2) {
-           
+         
           JOptionPane.showMessageDialog(null,"Doing");    
        }
        
        else if (statusTask == 3) {
-           
+          
            JOptionPane.showMessageDialog(null,"Done");
            
        }//else displays negative outcome if the user entered and incorrect option or invalid option
@@ -111,12 +110,15 @@ public static int totalDurTasks;
        }
         
      }while(statusTask > 3 || statusTask < 1);
-     //displays all information enetred
+     
+     
+     // JOptionPane displays all information enetred within this program
      JOptionPane.showMessageDialog(null,"Task Details: Task Name:|"+ nameTask +"\t| Task Description:|"+ descTask);
-     JOptionPane.showMessageDialog(null,"Task Details: Task developers name:|"+ nameSurnameDev +"\t| Task status:|"+ statusTask);
-     JOptionPane.showMessageDialog(null,"Task Details: Total duration:|"+ durTask );
+     JOptionPane.showMessageDialog(null,"Task Details: Task developers name:|"+ nameSurnameDev +"\t| Task status:|"
+                                         + ""+ statusTask +"Time duration:|"+ durTask );
      JOptionPane.showMessageDialog(null,"Task Details: Total duration:|"+ totalDurTasks);
-    
+     
+     
      }
         break;
               
