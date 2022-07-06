@@ -112,7 +112,7 @@ public class PROG1Java {
     public static void allConstructors (){
         UserLogin user1 = new UserLogin (userName, passWord, firstName, lastName);
         TaskInput user2 = new TaskInput();
-        
+        TaskArrays user3 = new TaskArrays();
     }
     
     

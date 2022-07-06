@@ -7,13 +7,15 @@ import javax.swing.JOptionPane;
 public class TaskInput {
     
 public static String descTask;
-public static int statusTask;
+public static String statusTask;
 public static int optChoice;
 public static int addTask;
 public static String nameSurnameDev;
 public static String nameTask;
 public static int durTask;
 public static int totalDurTasks;
+public static String taskID;
+public static int devStatusTask;
 
  TaskInput(){
    
@@ -25,7 +27,7 @@ public static int totalDurTasks;
         int countingTheTask =0;
         
         
-        // do while loop to return to main menu once each action has tacken place
+        // do while loop to return to main menu once each action has taken place
  do{
      //menu displays options for the user to select 
   optChoice = Integer.parseInt(JOptionPane.showInputDialog("Please select an Option:"
@@ -45,7 +47,7 @@ public static int totalDurTasks;
           
           countingTheTask++;
           
-       nameTask = JOptionPane.showInputDialog("Please enter the name of the assigned task:");
+      nameTask = JOptionPane.showInputDialog("Please enter the name of the assigned task:");
       
      do{
          
@@ -77,63 +79,75 @@ public static int totalDurTasks;
        //functions as it adds up the total number of hours it would take for the assignments 
        totalDurTasks += durTask;
        
-        JOptionPane.showMessageDialog(null, 
-    " Your Task ID :|" + nameTask.substring(0, 2)+":" + addTask + ":" + nameSurnameDev.substring(0, 3));      
+       taskID = nameTask.substring(0, 2).toUpperCase()+ ":" + addTask + ":" + nameSurnameDev.substring(0, 3).toUpperCase();
+      JOptionPane.showMessageDialog(null,"Your Task ID>>"+taskID);   
        
      do{ 
          //menu that allows the user to select a task status
-       statusTask = Integer.parseInt(JOptionPane.showInputDialog("Please enter the current status "
-              + "of the assigned task select an Option:\t|"
+       devStatusTask = Integer.parseInt(JOptionPane.showInputDialog("Please enter the current status "
+              + "of the assigned task select an Option number:\t|"
               + "Option 1 > To Do \t |"
               + "Option 2 > Doing \t |"
               + "Option 3 > Done"));
-      //if else statement runs through the selected opion and selects and apropriate outcome  
-       if(statusTask == 1){
+       
+      //if else statement runs through the selected option and selects an apropriate outcome  
+       if(devStatusTask == 1){
                  
-         JOptionPane.showMessageDialog(null,"To do");  
+         JOptionPane.showMessageDialog(null,"To do");
+         statusTask = ("To do");
        }
        
-       else if (statusTask == 2) {
+       else if (devStatusTask == 2) {
          
-          JOptionPane.showMessageDialog(null,"Doing");    
+          JOptionPane.showMessageDialog(null,"Doing");
+          statusTask = ("Doing");
        }
        
-       else if (statusTask == 3) {
+       else if (devStatusTask == 3) {
           
            JOptionPane.showMessageDialog(null,"Done");
+           statusTask = ("Done");
            
-       }//else displays negative outcome if the user entered and incorrect option or invalid option
+       }//else displays negative outcome if the user entered an invalid option
        else{
            
           JOptionPane.showMessageDialog(null,"You have selected an ivalid option. "
                     + "Please select a valid option for task status in the menu provided."); 
        }
         
-     }while(statusTask > 3 || statusTask < 1);
+     }while(devStatusTask > 3 || devStatusTask < 1);
      
      
      // JOptionPane displays all information enetred within this program
      JOptionPane.showMessageDialog(null,"Task Details: Task Name:|"+ nameTask +"\t| Task Description:|"+ descTask);
      JOptionPane.showMessageDialog(null,"Task Details: Task developers name:|"+ nameSurnameDev +"\t| Task status:|"
-                                         + ""+ statusTask +"Time duration:|"+ durTask );
-     JOptionPane.showMessageDialog(null,"Task Details: Total duration:|"+ totalDurTasks);
+                                         + ""+ statusTask +"|Time duration:|"+ durTask );
+     JOptionPane.showMessageDialog(null,"Task Details:Total duration:|"+ totalDurTasks +"Hrs|Task ID:|"+taskID);
      
      
      }
         break;
+        
+           
               
        
     case 2 :
-       JOptionPane.showMessageDialog(null,"COMING SOON!!! Feature is still in development.");
+        //construct class contains the method procces the Arrays that are initialized to capture and display the neccessary information that is requested.
+        JOptionPane.showMessageDialog(null,"you have selected to view Task Report");
+        TaskArrays user3 = new TaskArrays ();
+        
+          //JOptionPane.showMessageDialog(null,"Feature comming soon!!!");
+     
        break;
        
-       
+                   
        
        
     case 3 :
+        
        JOptionPane.showMessageDialog(null,"Thank you for useing EasyKanban.We anticipate your return.");
-       break;
        
+       break;
        
       //ends the program 
     default:
@@ -141,7 +155,7 @@ public static int totalDurTasks;
             + "Please ensure you select one of the given options.");
         break;
     }
-    //returns to the main menu if option wasnt selected 
+    //returns to the main menu if any option wasn't selected 
  }while(optChoice != 3);       
  
           
