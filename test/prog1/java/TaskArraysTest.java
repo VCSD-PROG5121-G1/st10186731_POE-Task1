@@ -21,6 +21,12 @@ public class TaskArraysTest {
      */
     @Test
     public void testLongDevDuration() {
+        System.out.println("longDevDuration");
+        int[] timeHrs = null;
+        String[] devDetails = null;
+        TaskArrays.longDevDuration(timeHrs, devDetails);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
     }
 
     /**
@@ -28,6 +34,15 @@ public class TaskArraysTest {
      */
     @Test
     public void testAllTaskDetails() {
+        System.out.println("allTaskDetails");
+        int[] timeHrs = null;
+        String[] devDetails = null;
+        String[] taskStatus = null;
+        String[] nameTask = null;
+        String[] taskID = null;
+        TaskArrays.allTaskDetails(timeHrs, devDetails, taskStatus, nameTask, taskID);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
     }
 
     /**
@@ -35,6 +50,16 @@ public class TaskArraysTest {
      */
     @Test
     public void testTaskDeletion() {
+        System.out.println("taskDeletion");
+        int numTasks = 0;
+        String[] taskID = null;
+        int[] timeHrs = null;
+        String[] devDetails = null;
+        String[] nameTask = null;
+        String[] taskStatus = null;
+        TaskArrays.taskDeletion(numTasks, taskID, timeHrs, devDetails, nameTask, taskStatus);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
     }
 
     /**
@@ -42,6 +67,15 @@ public class TaskArraysTest {
      */
     @Test
     public void testSearchFunction() {
+        System.out.println("SearchFunction");
+        String nameInput = "";
+        String[] devDetails = null;
+        String[] nameTask = null;
+        String[] taskStatus = null;
+        int[] timeHrs = null;
+        TaskArrays.SearchFunction(nameInput, devDetails, nameTask, taskStatus, timeHrs);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
     }
 
     /**
@@ -49,6 +83,14 @@ public class TaskArraysTest {
      */
     @Test
     public void testDevSearch() {
+        System.out.println("devSearch");
+        String devName = "";
+        String[] devDetails = null;
+        String[] nameTask = null;
+        String[] taskStatus = null;
+        TaskArrays.devSearch(devName, devDetails, nameTask, taskStatus);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
     }
 
     /**
@@ -56,6 +98,14 @@ public class TaskArraysTest {
      */
     @Test
     public void testCompletedTasks() {
+        System.out.println("completedTasks");
+        String[] devDetails = null;
+        String[] nameTask = null;
+        String[] taskStatus = null;
+        int[] timeHrs = null;
+        TaskArrays.completedTasks(devDetails, nameTask, taskStatus, timeHrs);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
     }
     
 }
